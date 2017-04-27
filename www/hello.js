@@ -5,6 +5,6 @@ module.exports = {
         cordova.exec(successCallback, errorCallback, "Hello", "greet", [name]);
     },
     getMonth: function (name, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "Ola", "getMonth", [name]);
+        cordova.exec(successCallback, errorCallback, "Hello", "getMonth", [name]);
     },
 };
