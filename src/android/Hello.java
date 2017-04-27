@@ -10,17 +10,19 @@ public class Hello extends CordovaPlugin {
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
         if (action.equals("greet")) {
-
-            String name = data.getString(0);
-            String message = "Hello, " + name;
+            String str = data.getString(0);
+            String message = "Codigo nativo em java " + str;
             callbackContext.success(message);
-
             return true;
 
-        } else {
-            
-            return false;
+        } else if (action.equals("getMonth")) {
+            String monthName = dt.monthOfYear().getAsText();
+            callbackContext.success(monthName);
+            return true;
 
+        }
+        else{
+            return false;
         }
     }
 }
