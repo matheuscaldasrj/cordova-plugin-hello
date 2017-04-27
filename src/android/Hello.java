@@ -16,6 +16,7 @@ public class Hello extends CordovaPlugin {
             return true;
 
         } else if (action.equals("getMonth")) {
+            DateTime dt = new DateTime();
             String monthName = dt.monthOfYear().getAsText();
             callbackContext.success(monthName);
             return true;
