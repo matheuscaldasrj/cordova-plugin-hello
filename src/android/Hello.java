@@ -15,10 +15,9 @@ public class Hello extends CordovaPlugin {
             callbackContext.success(message);
             return true;
 
-        } else if (action.equals("ola")) {
-            String str = data.getString(0);
-            String message = "Olaa " + str;
-            callbackContext.success(message);
+        } else if (action.equals("getMonth")) {
+            String monthName = dt.monthOfYear().getAsText();
+            callbackContext.success(monthName);
             return true;
 
         }
